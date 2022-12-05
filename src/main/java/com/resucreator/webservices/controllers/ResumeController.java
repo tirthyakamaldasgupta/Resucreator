@@ -13,15 +13,15 @@ import java.util.List;
 @RestController
 public class ResumeController {
     @Autowired
-    private ResumeService service;
+    private ResumeService resumeService;
 
     @GetMapping(path = "/resumes")
     public List<Resume> getResumes() {
-        return service.getResumes();
+        return resumeService.getResumes();
     }
 
     @PostMapping(path = "/resume")
     public String createResume(@RequestBody Resume resume) {
-        return service.createResume(resume);
+        return resumeService.createResume(resume);
     }
 }

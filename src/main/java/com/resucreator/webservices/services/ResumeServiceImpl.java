@@ -10,15 +10,15 @@ import java.util.List;
 @Service
 public class ResumeServiceImpl implements ResumeService{
     @Autowired
-    private ResumeRepository repository;
+    private ResumeRepository resumeRepository;
 
     @Override
     public String createResume(Resume resume) {
-        return repository.save(resume).getId();
+        return resumeRepository.save(resume).getId();
     }
 
     @Override
     public List<Resume> getResumes() {
-        return repository.findAll();
+        return resumeRepository.findAll();
     }
 }
