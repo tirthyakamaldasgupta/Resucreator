@@ -1,12 +1,14 @@
 package com.resucreator.webservices.collections;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Data
 @Builder
@@ -15,25 +17,18 @@ public class WorkExperience {
     @Id
     private String id;
 
-    @NotEmpty
     @NotBlank
-    @NotNull
     private String companyName;
 
-    @NotEmpty
     @NotBlank
-    @NotNull
     private String designation;
 
-    @NotEmpty
-    @NotBlank
     @NotNull
-    private String startDate;
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
+    private Date startDate;
 
-    private String endDate;
+    private Date endDate;
 
-    @NotEmpty
     @NotBlank
-    @NotNull
     private String description;
 }
