@@ -1,13 +1,11 @@
-package com.resucreator.webservices.controllers;
+package com.resucreator.webservices.controllers.resume;
 
 import com.resucreator.webservices.collections.Resume;
-import com.resucreator.webservices.services.ResumeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import com.resucreator.webservices.services.resume.ResumeService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ResumeController {
@@ -20,6 +18,11 @@ public class ResumeController {
     @GetMapping(path = "/resumes")
     public List<Resume> getResumes() {
         return resumeService.getResumes();
+    }
+
+    @GetMapping(path = "/resume/{id}")
+    public Optional<Resume> getResume(@PathVariable String id) {
+        return resumeService.getResume(id);
     }
 
     @PostMapping(path = "/resume")
