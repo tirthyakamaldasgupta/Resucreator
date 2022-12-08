@@ -1,7 +1,6 @@
 package com.resucreator.webservices.services.resume;
 
 import com.resucreator.webservices.collections.Resume;
-import com.resucreator.webservices.exceptions.NoSuchElementFoundException;
 import com.resucreator.webservices.repositories.ResumeRepository;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +33,6 @@ public class ResumeServiceImpl implements ResumeService {
             return resume;
         }
 
-        throw new NoSuchElementFoundException("No resume with an id " + id + " was found");
+        throw new RuntimeException("No resume with an id " + id + " was found");
     }
 }
