@@ -1,6 +1,8 @@
 package com.resucreator.webservices.services.resume;
 
 import com.resucreator.webservices.collections.Resume;
+import com.resucreator.webservices.exceptions.NoSuchElementException;
+import com.resucreator.webservices.exceptions.NoSuchElementsException;
 import com.resucreator.webservices.repositories.ResumeRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,13 @@ public class ResumeServiceImpl implements ResumeService {
 
     @Override
     public List<Resume> getResumes() {
-        return resumeRepository.findAll();
+        List<Resume> resumes = resumeRepository.findAll();
+
+        if (!resumes.isEmpty()) {
+            return resumes;
+        }
+
+        throw new NoSuchElementsException("No resumes were found");
     }
 
     @Override
@@ -33,6 +41,6 @@ public class ResumeServiceImpl implements ResumeService {
             return resume;
         }
 
-        throw new RuntimeException("No resume with an id " + id + " was found");
+        throw new NoSuchElementException("No resume with an id " + id + " was found");
     }
 }
