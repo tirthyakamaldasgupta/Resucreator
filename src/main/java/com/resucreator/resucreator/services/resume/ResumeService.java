@@ -1,6 +1,6 @@
-package com.resucreator.webservices.services.resume;
+package com.resucreator.resucreator.services.resume;
 
-import com.resucreator.webservices.collections.Resume;
+import com.resucreator.resucreator.collections.Resume;
 
 import java.util.List;
 import java.util.Optional;

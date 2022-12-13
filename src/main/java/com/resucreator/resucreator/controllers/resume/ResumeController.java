@@ -1,7 +1,7 @@
-package com.resucreator.webservices.controllers.resume;
+package com.resucreator.resucreator.controllers.resume;
 
-import com.resucreator.webservices.collections.Resume;
-import com.resucreator.webservices.services.resume.ResumeService;
+import com.resucreator.resucreator.collections.Resume;
+import com.resucreator.resucreator.services.resume.ResumeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

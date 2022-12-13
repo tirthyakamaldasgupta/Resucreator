@@ -1,4 +1,4 @@
-package com.resucreator.webservices;
+package com.resucreator.resucreator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

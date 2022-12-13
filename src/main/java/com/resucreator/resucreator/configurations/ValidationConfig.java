@@ -1,4 +1,4 @@
-package com.resucreator.webservices.configurations;
+package com.resucreator.resucreator.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

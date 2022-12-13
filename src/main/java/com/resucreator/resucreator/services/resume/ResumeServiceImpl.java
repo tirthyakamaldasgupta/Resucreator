@@ -1,9 +1,9 @@
-package com.resucreator.webservices.services.resume;
+package com.resucreator.resucreator.services.resume;
 
-import com.resucreator.webservices.collections.Resume;
-import com.resucreator.webservices.exceptions.NoSuchElementException;
-import com.resucreator.webservices.exceptions.NoSuchElementsException;
-import com.resucreator.webservices.repositories.ResumeRepository;
+import com.resucreator.resucreator.collections.Resume;
+import com.resucreator.resucreator.exceptions.NoSuchElementException;
+import com.resucreator.resucreator.exceptions.NoSuchElementsException;
+import com.resucreator.resucreator.repositories.ResumeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

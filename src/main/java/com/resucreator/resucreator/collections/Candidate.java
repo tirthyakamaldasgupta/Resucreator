@@ -1,4 +1,4 @@
-package com.resucreator.webservices.collections;
+package com.resucreator.resucreator.collections;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
