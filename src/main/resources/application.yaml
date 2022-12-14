@@ -1,9 +1,3 @@
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: resucreator
-springdoc:
-  swagger-ui:
-    path: /api/doc/swagger-ui/index.html
+  profiles:
+    active: @profileActive@
